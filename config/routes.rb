@@ -1,5 +1,7 @@
 Odot::Application.routes.draw do
-  resources :todo_lists
+  resources :todo_lists do
+    resources :todo_items
+  end
   root 'todo_lists#index' 
   # ^doing exactly what it says on line 8
   # The priority is based upon order of creation: first created -> highest priority.
